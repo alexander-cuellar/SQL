@@ -1,0 +1,34 @@
+--Create a book store database
+CREATE TABLE bookstore (id INTEGER PRIMARY KEY, book TEXT, genre TEXT, author TEXT, price NUMERIC, copy INTEGER);
+
+INSERT INTO books VALUES (1, "Vinland Saga","Manga","Makoto Yukimura",23,10);
+INSERT INTO books VALUES (2, "Sakomoto Days", "Manga", "Yuto Suzuki", 10,7);
+INSERT INTO books VALUES (3, "Tokyo Revengers", "Manga", "Ken Wakui", 23,4);
+INSERT INTO books VALUES (4, "21st Century Boys", "Manga", "Naoki Urasawa", 20,12);
+INSERT INTO books VALUES (5, "Dorohedoro", "Manga", "Q Hayashida", 14, 23);
+INSERT INTO books VALUES (6, "Chainsaw Man", "Manga", "Tatsuki Fujimoto", 10, 30);
+INSERT INTO books VALUES (7,"Fire Punch", "Manga", "Tatsuki Fujimoto" , 10, 3);
+INSERT INTO books VALUES (8, "Dune" , "Science Fiction", "Frank Herbert" , 15, 6);
+INSERT INTO books VALUES (9, "The Four Agreements","Spiritual","Don Miguel Ruiz", 13, 10);
+INSERT INTO books VALUES (10, "East of Eden", "Fiction" , "John Steinbeck", 18, 3);
+INSERT INTO books VALUES (11, "The Power of Now", "Spiritual", "Eckhart Tolle", 18, 2);
+INSERT INTO books VALUES (12,"Atomic Habits","Non Fiction", "James Clear", 14, 7);
+INSERT INTO books VALUES (13, "1984", "Fiction", "George Orwell",10,5);
+INSERT INTO books VALUES (14, "Men Without Women", "Fiction", "Haruki Murakami", 16, 1);
+INSERT INTO books VALUES (15, "Steve Jobs", "Biography", "Walter Isaacson", 17, 4);
+
+--Display the database ordered by price 
+SELECT *
+FROM bookstore 
+ORDER BY price ASC
+
+--What is the average price of a manga book?
+SELECT AVG(price) AS "avg manga book price"
+FROM bookstore
+WHERE section = 'manga';
+
+--What are the highest priced books?
+SELECT book, price
+FROM bookstore
+ORDER BY popularity desc
+LIMIT ; 
