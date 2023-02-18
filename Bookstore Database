@@ -31,4 +31,4 @@ WHERE section = 'manga';
 SELECT book, price
 FROM bookstore
 ORDER BY popularity desc
-LIMIT ; 
+LIMIT 5; 
