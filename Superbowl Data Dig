@@ -1,3 +1,9 @@
+--Data set: https://gist.github.com/pamelafox/3d8ab901def3577a8bfc881f6255d3f6
+-- Prompt: Pick one of those data sets or create a data set like that, and use advanced SELECT queries to discover things about the data.
+--What are average, max, and min values in the data?
+--What about those numbers per category in the data (using HAVING)?
+--What ways are there to group the data values that don’t exist yet (using CASE)?
+--What interesting ways are there to filter the data (using AND/OR)?
 CREATE TABLE superbowls(
   Date      TEXT PRIMARY KEY,
   SB         TEXT,
